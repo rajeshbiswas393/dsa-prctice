@@ -5,7 +5,8 @@ Given a 2D integer array nums, return all elements of nums in diagonal order as 
 
 
 */
-
+#include<bits/stdc++.h>
+using namespace std;
 class Solution {
 public:
     struct comp {
@@ -13,7 +14,7 @@ public:
         return x[0]==y[0] ? x[1]<y[1] : x[0]>y[0];
     }
 };
-    vector<int> findDiagonalOrder(vector<vector<int>>& nums) {
+vector<int> findDiagonalOrder(vector<vector<int>>& nums) {
         priority_queue<vector<int>, vector<vector<int>>, comp> pq;
         int n=nums.size();
         vector<int> ans;
